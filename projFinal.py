@@ -10,12 +10,12 @@ def adicionar_tarefa(tarefa):
 
 def listar_tarefas():
     if lista_de_tarefas == []:
-                print ("\nLista de tarefas vazia.")
+                print (f"{'-'*25}\nLista de tarefas vazia.")
                 vazia = True
                 return vazia
     else:
         vazia = False
-        print ("\nTarefas:")
+        print (f"{'-'*25}\nTarefas:")
         indice = 1
         for tarefa in lista_de_tarefas:
             print (f"{indice}: {tarefa}")
@@ -23,13 +23,13 @@ def listar_tarefas():
         return vazia
 
 def remover_tarefas(numero_tarefa):
-    print (f'\nTarefa "{lista_de_tarefas[numero_tarefa]}" removida!')
+    print (f'{"-"*25}\nTarefa "{lista_de_tarefas[numero_tarefa]}" removida!')
     lista_de_tarefas.pop(numero_tarefa)
     return lista_de_tarefas
 
 def exibir_menu():
     print(
-        "\nEscolha uma opção:\n" \
+        f"{'-'*25}\nEscolha uma opção:\n" \
         "1 - Inserir nova tarefa.\n" \
         "2 - Listar todas as tarefas.\n" \
         "3 - Remover uma tarefa.\n" \
@@ -42,7 +42,7 @@ def sair():
 
 
 # Loop principal
-print ("\nBoas vindas à sua lista de tarefas!")
+print (f"{'-'*25}\nBoas vindas à sua lista de tarefas!")
 while continuar == True:
     exibir_menu()
     
@@ -75,6 +75,3 @@ while continuar == True:
         else: print("\nOpção inválida, tente novamente. (s/n): ")
 
     else: print("\nOpção inválida, tente novamente.")
-
-
-
